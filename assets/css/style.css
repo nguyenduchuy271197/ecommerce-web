@@ -235,10 +235,11 @@ input::placeholder {
 
 .modal-content {
   position: relative;
+  z-index: 2;
   max-width: 350px;
   background: var(--white);
   border-radius: var(--border-radius-md);
-  z-index: 2;
+  overflow: hidden;
   margin: 20px;
   animation: scaleUp 0.5s ease-in-out 5s forwards;
 }
@@ -473,9 +474,8 @@ input::placeholder {
   transform: translateX(-50%);
   z-index: 5;
 
-  max-width: 500px;
   width: 100%;
-  padding: 5px 0;
+  height: 60px;
 
   display: flex;
   justify-content: space-around;
@@ -1747,8 +1747,13 @@ footer {
   margin-bottom: 30px;
 }
 
+.footer-nav > .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
 .footer-nav .footer-nav-list:not(:last-child) {
-  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   gap: 10px;
